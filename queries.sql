@@ -231,3 +231,8 @@ SELECT mdate,
        SUM(CASE WHEN teamid = team2 THEN 1 ELSE 0 END) AS score2 FROM
     game LEFT JOIN goal ON (id = matchid)
     GROUP BY mdate,team1,team2, matchid
+
+-- List the films where the yr is 1962 [Show id, title]
+SELECT id, title
+ FROM movie
+ WHERE yr=1962
